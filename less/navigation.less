@@ -1,1 +1,23 @@
 // Navigation code here
+.navbox {
+  .center();
+}
+
+.navbox {
+  flex-direction: column;
+
+  background: @nav-bg;
+  color: @nav-font;
+  border-bottom: 1px solid @nav-border;
+  h1 {
+    font-size: 4rem;
+  }
+  nav {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  nav a {
+    .nav-style;
+  }
+}
