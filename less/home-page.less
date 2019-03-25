@@ -54,27 +54,34 @@
 
     .walk-text {
       width: 50%;
+      @media @phone {
+        width: 100%;
 
-      h3 {
-        margin-bottom: 10px;
-      }
+        h3 {
+          margin-bottom: 10px;
+        }
 
-      p {
-        margin-bottom: 26px;
-      }
+        p {
+          margin-bottom: 26px;
+        }
 
-      .btn {
+        .btn {
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-
-      img {
+      @media @phone {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
       }
     }
   }
@@ -93,6 +100,10 @@
     color: hotpink;
     background: aqua;
   }
+  @media @phone {
+    width: 100%;
+    height: 50px;
+  }
 }
 
 @phone: ~"(max-width: 500px)";
@@ -108,10 +119,39 @@
   .walk {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn {
     width: 100%;
   }
+}
+
+.shiny {
+  background-image: -webkit-linear-gradient(
+    left,
+    white 25%,
+    #fde071 37.5%,
+    #ef9671,
+    #996a6e 62.5%,
+    white 75%
+  );
+  background-image: linear-gradient(
+    90deg,
+    white 25%,
+    #fde071 37.5%,
+    #ef9671,
+    #996a6e 62.5%,
+    white 75%
+  );
+  background-position: right center;
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: color 200ms linear;
+}
+
+.shiny:hover {
+  background-position: left center;
+  color: #ef9671;
+  transition: background-position 2000ms ease-out;
 }

@@ -248,20 +248,31 @@ footer {
 .home .walk .walk-text {
   width: 50%;
 }
-.home .walk .walk-text h3 {
-  margin-bottom: 10px;
-}
-.home .walk .walk-text p {
-  margin-bottom: 26px;
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
+  .home .walk .walk-text h3 {
+    margin-bottom: 10px;
+  }
+  .home .walk .walk-text p {
+    margin-bottom: 26px;
+  }
 }
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk .walk-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    height: 100%;
+  }
+  .home .walk .walk-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 }
 .header {
   color: #23293B;
@@ -279,6 +290,12 @@ footer {
   background: aqua;
 }
 @media (max-width: 500px) {
+  .bs {
+    width: 100%;
+    height: 50px;
+  }
+}
+@media (max-width: 500px) {
   nav a {
     width: 100%;
     margin-right: 5px;
@@ -288,10 +305,23 @@ footer {
   .walk {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .btn {
     width: 100%;
   }
+}
+.shiny {
+  background-image: -webkit-linear-gradient(left, white 25%, #fde071 37.5%, #ef9671, #996a6e 62.5%, white 75%);
+  background-image: linear-gradient(90deg, white 25%, #fde071 37.5%, #ef9671, #996a6e 62.5%, white 75%);
+  background-position: right center;
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: color 200ms linear;
+}
+.shiny:hover {
+  background-position: left center;
+  color: #ef9671;
+  transition: background-position 2000ms ease-out;
 }
