@@ -210,11 +210,24 @@ footer {
   flex-wrap: wrap;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images {
+    flex-direction: column-reverse;
+  }
+  .home .space-images div {
+    display: none;
+  }
+}
 .home .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 100%;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -264,4 +277,21 @@ footer {
 .bs:hover {
   color: hotpink;
   background: aqua;
+}
+@media (max-width: 500px) {
+  nav a {
+    width: 100%;
+    margin-right: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    width: 100%;
+  }
 }

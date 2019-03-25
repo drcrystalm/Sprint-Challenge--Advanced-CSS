@@ -15,12 +15,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone {
+      flex-direction: column-reverse;
+      div {
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width: 100%;
+      }
     }
   }
 
@@ -83,5 +92,26 @@
   &:hover {
     color: hotpink;
     background: aqua;
+  }
+}
+
+@phone: ~"(max-width: 500px)";
+
+@media @phone {
+  nav a {
+    width: 100%;
+    margin-right: 5px;
+  }
+}
+
+@media @phone {
+  .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    width: 100%;
   }
 }
