@@ -8,15 +8,33 @@
   background: @nav-bg;
   color: @nav-font;
   border-bottom: 1px solid @nav-border;
+
   h1 {
     font-size: 4rem;
   }
+
   nav {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
+
+    @media @phone {
+      width: 100%;
+      flex-direction: row;
+    }
   }
+
   nav a {
+    display: flex;
     .nav-style;
+    margin-bottom: 10px;
+
+
+    @media @phone {
+      display: flex;
+      width: 100%;
+      margin-right: 5px;
+      font-weight: bold;
+    }
   }
 }
